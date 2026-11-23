@@ -23,7 +23,7 @@ def make_prediction(model,input_data):
   
 #Step 3:Run a sample prediction when executed directly
  if __name__ == "__main__":
-   model=load_model()
+      model=load_model()
    data=load_breast_cancer()
    feature_names=data.feature_names
    sample_input=dict(zip(feature_names,data.data[0]))
@@ -32,7 +32,7 @@ def make_prediction(model,input_data):
    sample_input["mean perimeter"]=100.0
    input_df=pd.DataFrame([sample_input],
      columns=feature_names
-)
+                        )
 output=make_prediction(model,input_df)
 print("Model loaded successfully!")
 print("\n Prediction:",output["prediction"])
