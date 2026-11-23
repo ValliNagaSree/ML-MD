@@ -27,7 +27,7 @@ print(y.value_counts())
 X_train,X_test,y_train,y_test=train_test_split(
   X,
   y,
-  test_size=0.20
+  test_size=0.20,
   random_state=42,
   stratify=y
 )
@@ -126,7 +126,7 @@ print(classification_report(y_test,y_pred,target_names=data.target_names))
 print("\n Confusion Matrix:")
 print(confusion_matrix(y_test,y_pred))
 #step 10
-joblib.dumb(best_model,"best_model.joblib")
+joblib.dump(best_model,"best_model.joblib")
 print("\n Best model saved successfully!")
 print("Model:",best_model_name)
 
