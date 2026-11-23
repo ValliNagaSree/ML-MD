@@ -17,7 +17,7 @@ jobs:
         echo "Files in repository root:"
         ls -la
         echo "Searching for test_model.py:"
-        find . -name "test_model.py"
+        find .-name "test_model.py"
     - name: Check Repository Code
       uses: actions/checkout@v4
     - name: Set up Python
