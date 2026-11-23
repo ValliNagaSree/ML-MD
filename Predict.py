@@ -2,10 +2,12 @@
 import joblib
 import pandas as pd
 from sklearn.datasets import load_breast_cancer
+
 #Step 1:Load the saved model
 def load_model(model_path="best_model.joblib"):
   model=joblib.load(model_path)
   return model
+  
 #step 2:create a reuseable prediction function
 def make_prediction(model,input_data):
   prediction=model.predict(input_data)
@@ -18,6 +20,7 @@ def make_prediction(model,input_data):
        "benign":probabilities[0][1]
   }
 }
+  
 #Step 3:Run a sample prediction when executed directly
  if__name__=="__main__":
    model=load_model()
