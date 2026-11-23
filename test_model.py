@@ -23,7 +23,7 @@ def sample_data():
 def test_model_loads(model):
   assert model is not None
 #test 2
-def test_model_load(model,sample_data):
+def test_model_prediction(model,sample_data):
   predictions=model.predict(sample_data)
   assert predictions is not None
 #test 3
@@ -43,7 +43,7 @@ def test_prediction_probabilities(model,sample_data):
   assert np.allclose(probabilities.sum(axis=1),1)
 #test 6
 def test_model_pipeline(model):
-  assert hasatter(model,"named-steps")
+  assert hasattr(model,"named-steps")
   assert "scaler" in model.named_steps
   assert "model" in model.named_steps
 #test 7
