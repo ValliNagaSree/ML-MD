@@ -22,7 +22,7 @@ def make_prediction(model,input_data):
 }
   
 #Step 3:Run a sample prediction when executed directly
- if__name__=="__main__":
+ if __name__ == "__main__":
    model=load_model()
    data=load_breast_cancer()
    feature_names=data.feature_names
