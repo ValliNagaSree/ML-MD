@@ -32,7 +32,7 @@ X_train,X_test,y_train,y_test=train_test_split(
   stratify=y
 )
 print("\n Training samples:",X_train.shape[0])
-print("Testing samples:"X_test.shape[0])
+print("Testing samples:",X_test.shape[0])
 #step 4
 models= {
   "Logistic Regression":LogisticRegression(
